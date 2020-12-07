@@ -1,0 +1,115 @@
+{
+
+    "lastid": "1",
+    "whoisyou" : "alpercogurcu",
+
+    "user": [
+      
+        {
+            "image": "https://www.adamanset.net/files/uploads/news/default/20201121-akdogdu-gayrimenkul-danismanligi-hizmete-girdi-684598-8668fc2107fd5fbcef4b.jpg",
+            "username": "oguzakdogdu",
+            "alias": "Oğuz Kaan Akdoğdu",
+            "lastseen": "Bugün 13:30",
+            "unseen":0
+        },
+        {
+            "image": "https://d2halst20r4hcy.cloudfront.net/wallpapers2/021/694/737/152/original/12.jpg",
+            "username": "keremozdl",
+            "alias":"Kerem Özdil",
+            "lastseen": "Bugün 14:73",
+            "unseen":0
+        }
+    ],
+
+    "message":[
+        {
+            "owner":"alpercogurcu",
+            "sentto": "oguzakdogdu",
+            "id":1,
+            "message": "Selam Oğuz",
+            "time" : "10:28",
+            "isSeen" : true
+        },
+        {
+            "owner":"oguzakdogdu",
+            "sentto": "alpercogurcu",
+            "id": 2,
+            "message": "Selam Alper",
+            "time" : "10:28",
+            "isSeen" : false
+        },
+        {
+            "owner":"alpercogurcu",
+            "sentto": "oguzakdogdu",
+            "id": 3,
+            "message": "N'aber?",
+            "time" : "10:28", 
+            "isSeen": false
+        },
+        {
+            "owner":"alpercogurcu",
+            "sentto": "keremozdl",
+            "id": 4,
+            "message": "bu mesaj keremeydi",
+            "time" : "10:28",
+            "isSeen": false
+        },
+        {
+            "owner":"keremozdl",
+            "sentto": "alpercogurcu",
+            "id": 5,
+            "message": "bu mesaj alpereydi",
+            "time" : "10:28",
+            "isSeen": false
+        }
+        ,
+        {
+            "owner":"keremozdl",
+            "sentto": "alpercogurcu",
+            "id": 6,
+            "message": "bu mesaj alpereydi",
+            "time" : "10:28",
+            "isSeen": false
+        },
+        {
+            "owner":"keremozdl",
+            "sentto": "alpercogurcu",
+            "id": 7,
+            "message": "bu mesaj alpereydi",
+            "time" : "10:28",
+            "isSeen": false
+        },
+        {
+            "owner":"keremozdl",
+            "sentto": "alpercogurcu",
+            "id": 8,
+            "message": "bu mesaj alpereydi",
+            "time" : "10:28",
+            "isSeen": false
+        },
+        {
+            "owner":"keremozdl",
+            "sentto": "alpercogurcu",
+            "id": 9,
+            "message": "bu mesaj alpereydi",
+            "time" : "10:28",
+            "isSeen": false
+        },
+        {
+            "owner":"keremozdl",
+            "sentto": "alpercogurcu",
+            "id": 10,
+            "message": "bu mesaj alpereydi",
+            "time" : "10:28",
+            "isSeen": false
+        },
+        {
+            "owner":"keremozdl",
+            "sentto": "alpercogurcu",
+            "id": 11,
+            "message": "bu mesaj alpereydi",
+            "time" : "10:28",
+            "isSeen": false
+        }
+    ]
+}

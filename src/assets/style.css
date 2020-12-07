@@ -1,0 +1,451 @@
+html, body{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+:root{
+    --contentbackgroundcolor : #eee;
+    --inputtextbackgroundcolor : white;
+    --messageareabackgroundcolor : whitesmoke;
+    --messageheaderbackgroundcolor: white;
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+#app{
+    padding:0;
+    margin:0;
+
+}
+.flex-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: aqua;
+    height: 100%;
+    
+}
+
+
+
+.loadscreen{
+    width: 100%;
+    height: calc(50vh);
+    background-color: black;/* rgba(255, 255, 255,0.1);*/
+    color: white;
+    text-align: center;
+    padding-top: 50vh;
+    justify-items: center;
+    align-self: center;
+    display: block;
+    
+}
+
+
+.search{
+    height:100%;
+    padding-top: 15px;
+      
+ 
+ }
+
+ .messageheaderUserInfo{
+     display: grid;
+     grid-template-areas: 
+     "profilephoto username"
+    "profilephoto lastseen";
+
+    grid-template-columns: 55px;
+    height: 100%;
+
+    width: 50%;
+ }
+
+ 
+
+ .messageheaderUserInfo .profilephoto{
+     height: 50px;
+     width: 50px;
+     border-radius: 50%;
+     overflow: hidden;
+     grid-area: profilephoto;
+     align-self: center;
+ }
+
+ .messageheaderUserInfo .profilephoto > img{
+     height: 100%;
+     width: 100%;
+     
+     
+ }
+
+ .messageheaderUserInfo .username{
+     grid-area: username;
+     align-self: flex-end;
+     font-weight: bold;
+     
+ }
+
+ .messageheaderUserInfo .lastseen{
+
+     grid-area: lastseen;
+     font-size: small;
+    
+    
+ }
+
+
+ .search input{
+    width: 80%;
+     padding: 12px 12px 12px 40px;
+     border: 2px solid #ccc;
+     box-sizing: border-box;
+     border-radius: 8px;    
+     background-color: var(--inputtextbackgroundcolor);
+     transition: 0.7s;
+ }
+
+ .search input:focus{
+     outline: 0;
+     border-color: blue;
+     transition: 0.7s;
+ }
+
+ 
+
+ .search i{
+    position: relative;
+    left:30px;
+ }
+
+.contenthead{
+    grid-area: contentheader;
+    background-color: var(--contentbackgroundcolor);
+    border-bottom: solid 1px;
+    height: 75px;
+    
+}
+
+.blockdiv{
+    display: block;
+}
+.blockdiv :hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+.contentUserInfo{
+    padding-top:15px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-areas: 
+    "profilephoto username notification"
+    "profilephoto lastmessage notification";
+    grid-template-columns: 1fr 3fr 1fr;
+
+}
+
+.contentUserInfo :hover{
+cursor:pointer;
+  background-color: white;
+}
+
+
+
+.contentUserInfo .profilephoto{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    grid-area: profilephoto;
+    align-self: center;
+    justify-self: center;
+}
+.contentUserInfo .profilephoto > img{
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.contentUserInfo .username{
+    grid-area: username;
+    justify-content: flex-start;
+    align-self: flex-end;
+    font-weight: bold;
+    font-size:medium;
+
+}
+
+.contentUserInfo .lastmessage{
+    grid-area: lastmessage;
+    font-size: small;   
+}
+
+.contentUserInfo .notification{
+    grid-area: notification;
+    align-self: center;
+    justify-self: flex-start;
+    display: block;
+    background-color: green;
+    color:white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 50%;
+    font-size: small;
+    
+}
+
+.messageheader{
+    grid-area: messageheader;
+    background-color: var(--messageheaderbackgroundcolor);
+    display: flex;
+    height: 75px;
+    
+}
+
+.messageheader .actions{
+    justify-content: flex-end; 
+    align-self: center; 
+    display: flex; 
+    width: 100%;
+}
+.messageheader .actions > a{
+margin-right: 5%;
+}
+
+.contentlist{
+    grid-area: contentlist;
+    font-size: 20px;
+    height: calc(100vh - 76px);
+    background-color: var(--contentbackgroundcolor);
+    overflow: auto;
+}
+
+.contentlist .screendesktopcontent{
+    display: none;
+    padding: 15px;
+    background-color: whitesmoke;
+    font-size: small;
+    text-align: center;
+}
+.contentlist .screendesktopcontent >i{
+    margin-right: 5px;
+}
+.messagearea{
+    grid-area: messagearea;
+    background-color: var(--messageareabackgroundcolor);
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: calc(100vh - 75px - 62px);
+}
+
+.messagearea .message{
+     align-self: flex-start;
+  background-color: blueviolet;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  margin-left: 15px;
+  
+
+  
+}
+
+.messagearea .message .bubble{
+  
+    position: relative;
+    top: -1rem;
+    float: left;
+    left:-20px;
+ 
+    border-right: 12px solid blueviolet;
+    border-bottom:6px solid transparent ;
+    border-top:6px solid transparent;
+   
+}
+
+.messagearea .message .text{
+    color:white;
+}
+.messagearea .message .time{
+    font-size: small;
+    color:turquoise;
+    text-align:end;
+    padding-top: 5px;
+}
+
+.messagearea .yourmessage{
+  align-self: flex-end;
+  background-color: gainsboro;
+  padding: 10px;
+  border-radius: 15px;
+  margin:10px;
+  margin-right: 20px;
+}
+.messagearea .yourmessage .text{
+    color:black;
+}
+.messagearea .yourmessage .time{
+    font-size: small;
+    color:turquoise;
+    text-align:end;
+    padding-top: 5px;
+}
+
+.messagearea .yourmessage .bubble{
+  
+    position: relative;
+    top: -45%;
+    float: right;
+    right: -20px;
+
+ 
+    border-left: 12px solid gainsboro;
+    border-bottom:6px solid transparent ;
+    border-top:6px solid transparent;
+   
+}
+
+
+.messagefooter{
+    grid-area: messagefooter;
+    height: 60px;
+
+}
+.grid-container{
+    margin: 0px;
+    min-height: 100%;
+    display:grid;
+    grid-template-areas: 
+    'contentheader messageheader messageheader messageheader'
+    'contentlist messagearea messagearea messagearea'
+    'contentlist messagefooter messagefooter messagefooter';
+    grid-gap: 0px;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    padding:0px;
+
+}
+.backpress{
+    display: none;
+}
+
+.screendesktop{
+    display: none;
+}
+
+.hiddencb{
+  left: -100vw;
+  position: absolute;
+}
+
+
+
+
+    
+
+@media only screen and (max-width: 768px) {
+
+    
+#mobilescreen:checked ~ * .contenthead{
+    display: unset;
+    width: 100%;
+}
+
+#mobilescreen:checked ~ * .contentlist{
+   display: unset;
+    height: calc(100vh - 75px);
+    width: 100%;
+}
+
+#mobilescreen:checked ~ * .messageheader{
+    display: none;
+}
+
+#mobilescreen:checked ~ * .messagearea{
+   display: none;
+}
+
+#mobilescreen:checked ~ * .messagefooter{
+   display: none;
+}
+#mobilescreen:checked ~ .grid-container{
+    grid-template-columns: 1fr 0fr 0fr 0fr;
+}
+
+
+       
+    .contenthead{
+        height: 75px;
+        display: none;
+       
+    }
+    .contentlist{
+        height: calc(100vh - 75px);
+        display:none ;
+        
+    }
+
+    .grid-container{
+        grid-template-columns:0fr 1fr 1fr 1fr;
+    }
+
+   
+
+    .messageheaderUserInfo{
+        grid-template-columns: 55px;
+        width: 100%;
+      
+    }
+
+    .messageheaderUserInfo .username{
+        width: 150px;
+    }
+
+
+    .messageheader{
+        width: 100%;
+     
+        
+    }
+    .messageheader::after{
+        background-color: violet;
+    }
+   
+    .messagearea{
+        width: 100%;
+     
+    }
+
+    .messagefooter{
+        width: 100%;
+        
+    }
+    .backpress{
+        display: flex;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        align-self: center;
+    }
+    .screendesktop{
+        display: none;
+        align-self: center;
+    }
+    .backpress:active{
+        color: green;
+    }
+    
+}
