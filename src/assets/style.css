@@ -323,8 +323,44 @@ margin-right: 5%;
 .messagefooter{
     grid-area: messagefooter;
     height: 60px;
+    display: flex;
 
 }
+
+.messagefooter > i {
+    align-self: center;
+    justify-content: flex-end;
+    margin-left: 2%;
+    background-color: blueviolet;
+    border-radius: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: white;
+}
+
+.messagefooter .writemessage{
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    height: 100%;
+}
+
+.messagefooter .writemessage > input{
+    margin: 2px;
+    width: 90%;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
 .grid-container{
     margin: 0px;
     min-height: 100%;

@@ -27,7 +27,7 @@
 
            
             <label for="mobilescreen">
-            <div class="blockdiv" v-for="item in user" :key="item.id">
+            <div class="blockdiv" v-for="item in user" :key="item.id" v-if="whoisyou != item.username">
                 <div class="contentUserInfo"  v-on:click="contentuserclick(item.username)">
                     <div class="profilephoto"> <img
                            v-bind:src="item.image" /></div>
@@ -54,7 +54,14 @@
          
           
 
-        <div class="messagefooter" id ="messagefooter">messagefooter</div>
+        <div class="messagefooter" id ="messagefooter">
+          <div class="writemessage">
+          <input v-model="sentmessagedata.message" v-on:keyup.enter="sentmessage()" type="text" name="inputmessage" id="inputmessage" placeholder="Mesaj Yaz" />
+          </div>
+          <i class="fas fa-chevron-right fa-2x"></i>
+
+
+        </div>
     </div>
 
   </div>
@@ -66,21 +73,56 @@
 export default {
   name: 'App',
   data() { return{
+
+  
+
      isLoading : true,
+            lastid: 0,
             user: [],
             message: [],
             activemessage:[],
             activeprofile: [],
-            whoisyou: ""
+            whoisyou: "",
+            sentmessagedata:{
+      "owner": "",
+      "sentto": "",
+      "id" : "",
+      "message" : "",
+      "time" : "",
+      "isSeen": ""
+    },
   }
   },
         methods: {
+
+          changeseenmessage(){
+            console.log('deneme');
+          },
+          
+          sentmessage() {
+            
+            if(this.sentmessagedata.message != "" || this.sentmessagedata.message != null){
+            this.sentmessagedata.owner = this.whoisyou;
+            this.sentmessagedata.sentto = this.activeprofile.username;
+            this.sentmessagedata.id = this.lastid + 1;
+            this.lastid++;
+            var date = new Date();
+            this.sentmessagedata.time=date;
+            this.sentmessagedata.isSeen = false;
+            this.message.push(JSON.parse(JSON.stringify(this.sentmessagedata)));
+
+        
+            this.activemessage.push(JSON.parse(JSON.stringify(this.sentmessagedata)));
+            }
+            
+          },
             contentuserclick(username){
                 const item = this.message.filter(m=> (m.sentto == username && m.owner == this.whoisyou ) || (m.sentto == this.whoisyou && m.owner == username ));
                this.activemessage = item;
 
                const item2 = this.user.find(u=> u.username == username);
               this.activeprofile = item2;
+              this.changeseenmessage();
             },
 
             messageScrollToEnd(){
@@ -92,6 +134,8 @@ export default {
         },
         
         created(){
+
+           console.log('oluştu created');
            // setTimeout(() => {
                 //fetch("https://api.jsonbin.io/b/5fcce32c65c249127ba3e060")
                 fetch("data.json")
@@ -101,15 +145,18 @@ export default {
                     this.user = res.user;
                     this.message = res.message;
                     this.whoisyou = res.whoisyou;
-                    this.activeprofile = res.user[0];
+                    this.activeprofile = (res.user[0].username == res.whoisyou)? res.user[1]: res.user[0];
+                   this.contentuserclick((res.user[0].username == res.whoisyou)? res.user[1].username: res.user[0].username);
+                    this.lastid = res.lastid;
 
+                    // unseen count loop
                     for(let i=0; i<this.user.length; i++)
                     {
-                      console.log(this.user[i].username);
+                      var currentDateWithFormat = new Date();
+            console.log(currentDateWithFormat);
                       for (let j = 0; j < this.message.length; j++) {
                         if(this.message[j].isSeen == false && this.message[j].sentto == this.whoisyou && this.message[j].owner == this.user[i].username)
                         {
-                          console.log(this.message[j].message);
                           this.user[i].unseen += 1;
                       
                         }
@@ -120,9 +167,6 @@ export default {
                     }
                 }
                 )
-
-            
-                
                 
                  //contentuserclick(res.user[0].username);
             //}, 1000)
@@ -130,6 +174,7 @@ export default {
         },
         updated(){
           this.messageScrollToEnd();
+           
         }
 
 }
