@@ -305,8 +305,7 @@ margin-right: 5%;
     padding-top: 5px;
 }
 
-.messagearea .yourmessage .bubble{
-  
+.messagearea .yourmessage .bubble{ 
     position: relative;
     top: -45%;
     float: right;

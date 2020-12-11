@@ -6,7 +6,7 @@
     "user": [
       
         {
-            "image": "https://d2halst20r4hcy.cloudfront.net/wallpapers2/021/694/737/152/original/12.jpg",
+            "image": "https://img1.wsimg.com/isteam/ip/e06eb802-5da6-4e45-a295-f5b092d4a07b/692bffe4-a50f-4c20-bb70-36434a36574c.jpeg",
             "username": "alpercogurcu",
             "alias":"Rıza Alper Çöğürcü",
             "lastseen": "Bugün 14:03",
@@ -59,22 +59,22 @@
             "id": 4,
             "message": "bu mesaj keremeydi",
             "time" : "10:28",
-            "isSeen": false
+            "isSeen": true
         },
         {
             "owner":"keremozdl",
             "sentto": "alpercogurcu",
             "id": 5,
-            "message": "bu mesaj alpereydi",
+            "message": "bu mesaj alpereydi 1",
             "time" : "10:28",
-            "isSeen": false
+            "isSeen": true
         }
         ,
         {
             "owner":"keremozdl",
             "sentto": "alpercogurcu",
             "id": 6,
-            "message": "bu mesaj alpereydi",
+            "message": "bu mesaj alpereydi 2",
             "time" : "10:28",
             "isSeen": false
         },
@@ -82,7 +82,7 @@
             "owner":"keremozdl",
             "sentto": "alpercogurcu",
             "id": 7,
-            "message": "bu mesaj alpereydi",
+            "message": "bu mesaj alpereydi 3 ",
             "time" : "10:28",
             "isSeen": false
         },
@@ -90,7 +90,7 @@
             "owner":"keremozdl",
             "sentto": "alpercogurcu",
             "id": 8,
-            "message": "bu mesaj alpereydi",
+            "message": "bu mesaj alpereydi 4",
             "time" : "10:28",
             "isSeen": false
         },
@@ -98,7 +98,7 @@
             "owner":"keremozdl",
             "sentto": "alpercogurcu",
             "id": 9,
-            "message": "bu mesaj alpereydi",
+            "message": "bu mesaj alpereydi 5",
             "time" : "10:28",
             "isSeen": false
         },
@@ -106,7 +106,7 @@
             "owner":"keremozdl",
             "sentto": "alpercogurcu",
             "id": 10,
-            "message": "bu mesaj alpereydi",
+            "message": "bu mesaj alpereydi 6",
             "time" : "10:28",
             "isSeen": false
         },
@@ -114,7 +114,7 @@
             "owner":"keremozdl",
             "sentto": "alpercogurcu",
             "id": 11,
-            "message": "bu mesaj alpereydi",
+            "message": "bu mesaj alpereydi 7",
             "time" : "10:28",
             "isSeen": false
         }
