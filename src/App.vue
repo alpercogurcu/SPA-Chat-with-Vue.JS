@@ -16,6 +16,7 @@
           ></label>
         </div>
         <div class="messageheaderUserInfo">
+        
           <div class="profilephoto">
             <img :src="this.activeprofile.image" />
           </div>
@@ -24,7 +25,9 @@
         </div>
         <div class="actions">
           <!---  <a href='#' class="screendesktop" id="screendesktop"><i class="fas fa-desktop fa-2x"></i></a>-->
-          <a-icon type="star" theme="filled" />
+          <a-icon type="sync" spin />
+          
+     
           <a href="#"> <i class="fas fa-info-circle fa-2x"></i></a>
           <a href="#"> <i class="fas fa-ellipsis-v fa-2x"></i> </a>
         </div>
@@ -97,6 +100,7 @@ export default {
   name: "App",
   data() {
     return {
+       value: 2,
       isLoading: true,
       lastid: 0,
       user: [],
