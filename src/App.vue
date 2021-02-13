@@ -25,7 +25,7 @@
         </div>
         <div class="actions">
           <!---  <a href='#' class="screendesktop" id="screendesktop"><i class="fas fa-desktop fa-2x"></i></a>-->
-          <a-icon type="sync" spin />
+          <a-icon type="star" spin />
           
      
           <a href="#"> <i class="fas fa-info-circle fa-2x"></i></a>
